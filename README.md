@@ -8,11 +8,11 @@ Download the latest release:
 
 https://github.com/matrixy9/mimo-lite-gui/releases/latest
 
-Download the file named:
+Choose the package for your system:
 
-```text
-mimo-lite-gui.zip
-```
+- macOS: `mimo-lite-gui-macos.zip`
+- Windows: `mimo-lite-gui-windows.zip`
+- Linux: `mimo-lite-gui-linux.zip`
 
 Do not use GitHub's green `Code -> Download ZIP` button. That only downloads the repository README, not the GUI release package.
 
@@ -24,82 +24,47 @@ Do not use GitHub's green `Code -> Download ZIP` button. That only downloads the
 
 This project does not include API keys, sessions, logs, caches, or model credentials.
 
-## macOS / Linux
+## macOS
 
-Download and unzip `mimo-lite-gui.zip`, then run:
-
-```bash
-unzip mimo-lite-gui.zip
-cd mimo-lite-gui
-npm install
-MIMO_PROJECT_DIR="/path/to/your/project" npm start
-```
-
-Open:
-
-```text
-http://127.0.0.1:30143
-```
-
-`MIMO_PROJECT_DIR` should point to the project you want MiMo Code to work on, not the GUI folder.
+1. Download `mimo-lite-gui-macos.zip`.
+2. Unzip it.
+3. Double-click `Open MiMo Lite GUI.command`.
+4. Choose the code project folder that MiMo Code should work on.
+5. Open `http://127.0.0.1:30143` if the browser does not open automatically.
 
 ## Windows
 
-PowerShell:
+1. Download `mimo-lite-gui-windows.zip`.
+2. Unzip it.
+3. Double-click `Open MiMo Lite GUI.cmd`.
+4. Choose the code project folder that MiMo Code should work on.
+5. Open `http://127.0.0.1:30143` if the browser does not open automatically.
 
-```powershell
-Expand-Archive .\mimo-lite-gui.zip
-cd .\mimo-lite-gui
-npm install
-$env:MIMO_PROJECT_DIR="C:\Users\YourName\Projects\your-project"; npm start
+## Linux
+
+1. Download `mimo-lite-gui-linux.zip`.
+2. Unzip it.
+3. Run:
+
+```bash
+chmod +x ./open-mimo-lite-gui.sh
+./open-mimo-lite-gui.sh
 ```
 
-Open:
+4. Choose the code project folder that MiMo Code should work on.
+5. Open `http://127.0.0.1:30143` if the browser does not open automatically.
 
-```text
-http://127.0.0.1:30143
-```
+## What Is The Project Folder?
 
-`MIMO_PROJECT_DIR` should point to the project you want MiMo Code to work on, not the GUI folder.
+The project folder is the codebase you want MiMo Code to read, edit, and run commands inside. It is not the GUI folder.
+
+The launcher remembers your selected project folder. Delete `.mimo-lite-gui-project` or `.mimo-lite-gui-project.txt` inside the GUI folder if you want to choose a different project next time.
 
 ## API / Model Credentials
 
 This GUI does not include or store API keys, sessions, logs, caches, or model credentials.
 
-Configure your API keys and model provider in MiMo CLI first. After MiMo CLI works from your terminal, start this GUI from the same terminal environment.
-
-If your MiMo setup uses environment variables for credentials, set them in the same terminal before running `npm start`.
-
-## Use An Existing Backend
-
-If you already started MiMo backend:
-
-```bash
-mimo web --port 30142 --hostname 127.0.0.1
-```
-
-Run the GUI only:
-
-```bash
-MIMO_PROJECT_DIR="/path/to/your/project" MIMO_GUI_START_BACKEND=0 npm start
-```
-
-On Windows PowerShell:
-
-```powershell
-$env:MIMO_PROJECT_DIR="C:\Users\YourName\Projects\your-project"; $env:MIMO_GUI_START_BACKEND="0"; npm start
-```
-
-## Configuration
-
-Optional environment variables:
-
-```bash
-MIMO_PROJECT_DIR=/path/to/project
-MIMO_GUI_PORT=30143
-MIMO_BACKEND_PORT=30142
-MIMO_BIN=/path/to/mimo
-```
+Configure your API keys and model provider in MiMo CLI first. After MiMo CLI works from your terminal, start this GUI.
 
 ## Safety
 
