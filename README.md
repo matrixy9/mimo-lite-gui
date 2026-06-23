@@ -4,14 +4,21 @@ A lightweight local browser GUI for MiMo Code/OpenCode-compatible APIs.
 
 ## Download
 
-Go to Releases and download `mimo-lite-gui.zip`.
+Download the latest release:
+
+https://github.com/matrixy9/mimo-lite-gui/releases/latest
 
 ## Requirements
 
 - Node.js 18+
-- MiMo CLI available as `mimo`, or set `MIMO_BIN`
+- MiMo CLI installed and configured
+- Your own MiMo/API/model credentials
 
-## Run
+This project does not include API keys, sessions, logs, caches, or model credentials.
+
+## Quick Start
+
+Download `mimo-lite-gui.zip` from Releases, then:
 
 ```bash
 unzip mimo-lite-gui.zip
